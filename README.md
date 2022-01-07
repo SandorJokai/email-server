@@ -1,5 +1,5 @@
 ![npm package](https://img.shields.io/badge/centos-7.9.2009-purple.svg)
-![npm package](https://img.shields.io/badge/postfix-2.10.1-grey.svg)
+![npm package](https://img.shields.io/badge/postfix-2.10.1-silver.svg)
 ![npm package](https://img.shields.io/badge/dovecot-2.2.36-cyan.svg)
 ![npm package](https://img.shields.io/badge/mariadb-5.5.68-orange.svg)
 ![npm package](https://img.shields.io/badge/spamassassin-3.4.0-pink.svg)
