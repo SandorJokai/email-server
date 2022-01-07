@@ -48,6 +48,7 @@ MariaDB [(none)]> CREATE TABLE `EmailServer_db`.`Alias_tbl` ( `AliasId` INT NOT 
 
 <h4>Once the tables has created, let's upload some details:</h4>
 
+
 ```bash
 MariaDB [(none)]> use database EmailServer_db;
 MariaDB [(none)]> INSERT INTO Domains_tbl (DomainName) VALUES ('domain.tld');
