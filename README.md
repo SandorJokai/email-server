@@ -7,6 +7,7 @@
 ![npm package](https://img.shields.io/badge/clamav-0.103.4-red.svg)
 
 <h2>Prerequisites</h2>
+
   - Create a public domain if not exists yet
 
   - with an A and MX and TXT records
