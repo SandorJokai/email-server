@@ -16,6 +16,8 @@ We need a place to store our client's informations (email addresses etc.). I hav
 and secure.
 The commands below represents how to setup and configure:
 <h1>Let's install first among with the other packages:</h1>
+
 ```bash
 yum update && yum install postfix dovecot dovecot-mysql spamassassin clamav clamav-scanner-systemd clamav-data clamav-update mariadb-server
 ```
+
