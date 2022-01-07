@@ -15,7 +15,7 @@
 We need a place to store our client's informations (email addresses etc.). I have chosen mariadb for that purpose, since its fast, easy to setup
 and secure.
 The commands below represents how to setup and configure:
-<h1>Let's install first among with the other packages:</h1>
+<h3>Let's install first among with the other packages:</h3>
 
 ```bash
 yum update && yum install postfix dovecot dovecot-mysql spamassassin clamav clamav-scanner-systemd clamav-data clamav-update mariadb-server
