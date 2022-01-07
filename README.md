@@ -1,7 +1,7 @@
 ![npm package](https://img.shields.io/badge/centos-7.9.2009-purple.svg)
 ![npm package](https://img.shields.io/badge/postfix-2.10.1-grey.svg)
 ![npm package](https://img.shields.io/badge/dovecot-2.2.36-cyan.svg)
-![npm package](https://img.shields.io/badge/mariadb-5.5.68-lightbrown.svg)
+![npm package](https://img.shields.io/badge/mariadb-5.5.68-orange.svg)
 ![npm package](https://img.shields.io/badge/spamassassin-3.4.0-pink.svg)
 ![npm package](https://img.shields.io/badge/opendkim-2.11.0-yellow.svg)
 ![npm package](https://img.shields.io/badge/clamav-0.103.4-red.svg)
@@ -46,8 +46,8 @@ MariaDB [(none)]> CREATE TABLE `EmailServer_db`.`Users_tbl` ( `UserId` INT NOT N
 MariaDB [(none)]> CREATE TABLE `EmailServer_db`.`Alias_tbl` ( `AliasId` INT NOT NULL AUTO_INCREMENT, `DomainId` INT NOT NULL, `Source` varchar(100) NOT NULL, `Destination` varchar(100) NOT NULL, PRIMARY KEY (`AliasId`), FOREIGN KEY (DomainId) REFERENCES Domains_tbl(DomainId) ON DELETE CASCADE ) ENGINE = InnoDB;
 ```
 
-<h4>Once the tables has created, let's upload some details:</h4>
 
+<h4>Once the tables has created, let's upload some details:</h4>
 
 ```bash
 MariaDB [(none)]> use database EmailServer_db;
