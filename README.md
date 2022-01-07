@@ -40,7 +40,7 @@ MariaDB [(none)]> CREATE TABLE `EmailServer_db`.`Domains_tbl` ( `DomainId` INT N
 ```bash
 MariaDB [(none)]> CREATE TABLE `EmailServer_db`.`Users_tbl` ( `UserId` INT NOT NULL AUTO_INCREMENT, `DomainId` INT NOT NULL, `password` VARCHAR(106) NOT NULL, `Email` VARCHAR(100) NOT NULL, PRIMARY KEY (`UserId`), UNIQUE KEY `Email` (`Email`), FOREIGN KEY (DomainId) REFERENCES Domains_tbl(DomainId) ON DELETE CASCADE ) ENGINE = InnoDB;
 ```
-(Note that using varchar(!106) caused password mismatch as the return hash value is 106, needs to be set to 106!)
+(Note that using varchar(!106) caused password mismatch as the return hash value is 106, needs to be set to 106 at least!)
 
 ```bash
 MariaDB [(none)]> CREATE TABLE `EmailServer_db`.`Alias_tbl` ( `AliasId` INT NOT NULL AUTO_INCREMENT, `DomainId` INT NOT NULL, `Source` varchar(100) NOT NULL, `Destination` varchar(100) NOT NULL, PRIMARY KEY (`AliasId`), FOREIGN KEY (DomainId) REFERENCES Domains_tbl(DomainId) ON DELETE CASCADE ) ENGINE = InnoDB;
@@ -63,3 +63,11 @@ MariaDB [(none)]> INSERT INTO Alias_tbl (DomainId, Source, Destination) VALUES (
 ```bash
 MariaDB [(none)]> INSERT INTO Users_tbl (DomainId, password, Email) VALUES (1, ENCRYPT('secretPassword', CONCAT('$6$', SUBSTRING(SHA(RAND()), -16))), 'user@domain.tld');
 ```
+
+![npm package](https://img.shields.io/badge/centos-7.9.2009-purple.svg)
+![npm package](https://img.shields.io/badge/postfix-2.10.1-silver.svg)
+![npm package](https://img.shields.io/badge/dovecot-2.2.36-cyan.svg)
+![npm package](https://img.shields.io/badge/mariadb-5.5.68-orange.svg)
+![npm package](https://img.shields.io/badge/spamassassin-3.4.0-pink.svg)
+![npm package](https://img.shields.io/badge/opendkim-2.11.0-yellow.svg)
+![npm package](https://img.shields.io/badge/clamav-0.103.4-red.svg)
