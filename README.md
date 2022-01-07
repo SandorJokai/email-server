@@ -40,6 +40,7 @@ MariaDB [(none)]> CREATE TABLE `EmailServer_db`.`Domains_tbl` ( `DomainId` INT N
 ```bash
 MariaDB [(none)]> CREATE TABLE `EmailServer_db`.`Users_tbl` ( `UserId` INT NOT NULL AUTO_INCREMENT, `DomainId` INT NOT NULL, `password` VARCHAR(106) NOT NULL, `Email` VARCHAR(100) NOT NULL, PRIMARY KEY (`UserId`), UNIQUE KEY `Email` (`Email`), FOREIGN KEY (DomainId) REFERENCES Domains_tbl(DomainId) ON DELETE CASCADE ) ENGINE = InnoDB;
 ```
+(Note that using varchar(!106) caused password mismatch as the return hash value is 106, needs to be set to 106!)
 
 ```bash
 MariaDB [(none)]> CREATE TABLE `EmailServer_db`.`Alias_tbl` ( `AliasId` INT NOT NULL AUTO_INCREMENT, `DomainId` INT NOT NULL, `Source` varchar(100) NOT NULL, `Destination` varchar(100) NOT NULL, PRIMARY KEY (`AliasId`), FOREIGN KEY (DomainId) REFERENCES Domains_tbl(DomainId) ON DELETE CASCADE ) ENGINE = InnoDB;
