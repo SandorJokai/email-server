@@ -46,7 +46,7 @@ MariaDB [(none)]> CREATE TABLE `EmailServer_db`.`Users_tbl` ( `UserId` INT NOT N
 MariaDB [(none)]> CREATE TABLE `EmailServer_db`.`Alias_tbl` ( `AliasId` INT NOT NULL AUTO_INCREMENT, `DomainId` INT NOT NULL, `Source` varchar(100) NOT NULL, `Destination` varchar(100) NOT NULL, PRIMARY KEY (`AliasId`), FOREIGN KEY (DomainId) REFERENCES Domains_tbl(DomainId) ON DELETE CASCADE ) ENGINE = InnoDB;
 ```
 
-Once the tables has created, let's upload some details:
+<h4>Once the tables has created, let's upload some details:</h4>
 
 ```bash
 MariaDB [(none)]> use database EmailServer_db;
