@@ -8,7 +8,9 @@
 
 <h2>Prerequisites</h2>
   - Create a public domain if not exists yet
+
   - with an A and MX and TXT records
+
   - root privileges on the workstation (server)
 
 <h2>Install and configure mysql</h2>
